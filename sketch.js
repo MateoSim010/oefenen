@@ -15,6 +15,7 @@
 let appelX = 600; // x-positie van appel
 let appelY = 50;  // y-positie van appel
 let appelBreedte = 20;
+let appelsnelheid = 2;
 
 
 /* ********************************************* */
@@ -43,5 +44,11 @@ function draw() {
   // teken appel
   noStroke();         // geen lijntje om de vorm heen
   fill(255, 0, 0)     // vulkleur wordt rood
-  rect(appelX, appelY, appelBreedte, appleBreedte);
+  rect(appelX, appelY, appelBreedte, appelBreedte);
+}
+
+function loop() {
+  while (appelY > 50){
+    appelY = appelY - appelsnelheid;
+  }
 }
